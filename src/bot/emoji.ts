@@ -21,7 +21,7 @@ export default (app: express.Express, uri: string): void => {
             axios.post(SLACK_WEBHOOK_EMOJI_URL, {
               text:
                 [
-                  ":arrow_up: エイリアスが追加されました！",
+                  ":repeat: エイリアスが追加されました！",
                   `\`:${antiAlias}:\` -> \`:${name}:\``, `:${antiAlias}:`,
                 ].join("\n")
             })
@@ -29,7 +29,7 @@ export default (app: express.Express, uri: string): void => {
             axios.post(SLACK_WEBHOOK_EMOJI_URL, {
               text:
                 [
-                  ":repeat: 絵文字が追加されました！", `\`:${name}:\``, value,
+                  ":arrow_up: 絵文字が追加されました！", `\`:${name}:\``, value,
                 ].join("\n")
             })
           }
